@@ -1,3 +1,5 @@
 user:
   message: Hello from centralized dev config
   timeout: 3000
+app:
+  environment: DEV
