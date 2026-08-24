@@ -1,0 +1,4 @@
+server:
+  port: 9090
+user:
+  message: Hello from configuration server
