@@ -1,0 +1,4 @@
+user:
+  message: Hello User from TEST central config
+app:
+  environment: TEST
