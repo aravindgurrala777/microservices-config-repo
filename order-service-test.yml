@@ -1,0 +1,4 @@
+order:
+  message: Hello Order from Test central config
+app:
+  environment: TEST
