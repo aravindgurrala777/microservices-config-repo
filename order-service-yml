@@ -1,4 +1,4 @@
 server:
   port: 9091
-user:
+order:
   message: Order service from centralized config
