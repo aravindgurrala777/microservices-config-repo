@@ -1,2 +1,4 @@
 order:
   message: Order service centralized dev config
+app:
+  environment: DEV
