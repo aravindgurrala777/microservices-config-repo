@@ -1,4 +1,7 @@
 server:
   port: 9091
 order:
-  message: Order service from centralized config
+  message: Hello Order service from centralized config
+app:
+  timeout: 5000
+  environment: DEFAULT
