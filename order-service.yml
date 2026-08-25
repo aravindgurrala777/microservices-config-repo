@@ -7,3 +7,18 @@ app:
   rest:
     connect-timeout: 2000
     read-timeout: 3000
+resilience4j:
+  retry:
+    instances:
+      userService:
+        max-attempts: 3
+        wait-duration: 500ms
+        enable-exponential-backoff: true
+        exponential-backoff-multiplier: 2
+        retry-exceptions:
+          - org.springframework.web.client.ResourceAccessException
+          - java.net.SocketTimeoutException
+
+logging:
+  level:
+    org.springframework.web.client: DEBUG
