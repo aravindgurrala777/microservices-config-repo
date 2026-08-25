@@ -18,6 +18,8 @@ resilience4j:
         retry-exceptions:
           - org.springframework.web.client.ResourceAccessException
           - java.net.SocketTimeoutException
+          - org.springframework.web.client.HttpServerErrorException
+          - javalang.RuntimeException
 
 logging:
   level:
