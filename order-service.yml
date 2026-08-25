@@ -3,5 +3,7 @@ server:
 order:
   message: Hello Order service from centralized config
 app:
-  timeout: 5000
   environment: DEFAULT
+  rest:
+    connect-timeout: 2000
+    read-timeout: 3000
