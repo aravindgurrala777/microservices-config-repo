@@ -19,7 +19,7 @@ resilience4j:
           - org.springframework.web.client.ResourceAccessException
           - java.net.SocketTimeoutException
           - org.springframework.web.client.HttpServerErrorException
-          - javalang.RuntimeException
+          - java.lang.RuntimeException
 
 logging:
   level:
