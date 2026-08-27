@@ -29,6 +29,12 @@ resilience4j:
        sliding-window-size: 10
        wait-duration-in-open-state: 10s
        permitted-number-of-calls-in-half-open-state: 3
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, circuitbreakers
           
 logging:
   level:
