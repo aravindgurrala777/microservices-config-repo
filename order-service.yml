@@ -34,7 +34,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: "_"
+        include: "*"
   endpoint:
     health:
       show-details: always
