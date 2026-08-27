@@ -21,14 +21,14 @@ resilience4j:
        #   - java.net.SocketTimeoutException
        #   - org.springframework.web.client.HttpServerErrorException
        #    - java.lang.RuntimeException
- circuitbreaker:
-   instances:
-     userService:
-       failure-rate-threshold: 50
-       minimum-number-of-calls: 3
-       sliding-window-size: 5
-       wait-duration-in-open-state: 10s
-       permitted-number-of-calls-in-half-open-state: 2
+  circuitbreaker:
+    instances:
+      userService:
+        failure-rate-threshold: 50
+        minimum-number-of-calls: 3
+        sliding-window-size: 5
+        wait-duration-in-open-state: 10s
+        permitted-number-of-calls-in-half-open-state: 2
 
 management:
   endpoints:
