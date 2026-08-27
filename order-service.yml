@@ -29,6 +29,17 @@ resilience4j:
         sliding-window-size: 5
         wait-duration-in-open-state: 10s
         permitted-number-of-calls-in-half-open-state: 2
+  bulkhead:
+    instances:
+      userServices:
+        max-concurrent-calls: 5
+        max-wait-duration: 0s
+  thread-pool-bulkhead:
+    instances:
+      userService:
+        max-thread-pool-size: 5
+        core-thread-pool-size: 3
+        queue-capacity: 10
 
 management:
   endpoints:
