@@ -7,4 +7,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh,health,info
+        include: "*"
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
