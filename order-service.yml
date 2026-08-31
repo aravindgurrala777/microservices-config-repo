@@ -29,6 +29,9 @@ resilience4j:
         sliding-window-size: 5
         wait-duration-in-open-state: 10s
         permitted-number-of-calls-in-half-open-state: 2
+        ignore-exceptions:
+          - com.project.task.exception.ResourceNotFoundException
+          - com.project.task.exception.BadRequestException
   bulkhead:
     instances:
       userServices:
