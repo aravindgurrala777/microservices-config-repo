@@ -16,11 +16,14 @@ resilience4j:
         enable-exponential-backoff: true
         exponential-backoff-multiplier: 2
         retry-exceptions:
-          - java.lang.Exception
-       #   - org.springframework.web.client.ResourceAccessException
-       #   - java.net.SocketTimeoutException
-       #   - org.springframework.web.client.HttpServerErrorException
-       #    - java.lang.RuntimeException
+       #  - java.lang.Exception
+          - org.springframework.web.client.ResourceAccessException
+          - java.net.SocketTimeoutException
+          - org.springframework.web.client.HttpServerErrorException
+          - java.lang.RuntimeException
+        ignore-exceptions:
+          - com.project.task.exception.ResourceNotFoundException
+          - com.project.task.exception.BadRequestException
   circuitbreaker:
     instances:
       userService:
@@ -34,7 +37,7 @@ resilience4j:
           - com.project.task.exception.BadRequestException
   bulkhead:
     instances:
-      userServices:
+      userService:
         max-concurrent-calls: 5
         max-wait-duration: 0s
   thread-pool-bulkhead:
