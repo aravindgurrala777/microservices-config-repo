@@ -5,7 +5,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          public-key-location: classpath:public-key.pem
+          secret-key: mysecretkeymysecretkeymysecretkey1234567890mysecretkey		
 user:
   message: Hello from configuration server
 app:
