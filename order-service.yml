@@ -16,10 +16,12 @@ resilience4j:
         enable-exponential-backoff: true
         exponential-backoff-multiplier: 2
         retry-exceptions:
-       #  - java.lang.Exception
+          - java.lang.Exception
           - org.springframework.web.client.ResourceAccessException
           - java.net.SocketTimeoutException
           - org.springframework.web.client.HttpServerErrorException
+          - java.io.IOException
+          - org.springframework.web.client.HttpClientErrorException
        #  - java.lang.RuntimeException
         ignore-exceptions:
           - com.project.task.exception.ResourceNotFoundException
